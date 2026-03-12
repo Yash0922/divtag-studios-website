@@ -65,13 +65,13 @@ export function HeroSection({ className }: { className?: string }) {
         </p>
         <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[1.1] tracking-tight text-balance mb-6">
           <span
-            className="block text-gradient-hero animate-fade-in-up opacity-0"
+            className="block text-gradient-hero animate-fade-in-up opacity-0 pb-2"
             style={{ animationDelay: '0.25s', animationFillMode: 'forwards' }}
           >
             Turning Pixels
           </span>
           <span
-            className="block text-gradient-hero animate-fade-in-up opacity-0"
+            className="block text-gradient-hero animate-fade-in-up opacity-0 "
             style={{ animationDelay: '0.45s', animationFillMode: 'forwards' }}
           >
             into Products
