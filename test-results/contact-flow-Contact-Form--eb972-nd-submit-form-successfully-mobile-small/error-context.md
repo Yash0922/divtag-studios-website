@@ -1,0 +1,142 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - link "Skip to main content" [ref=e2]:
+    - /url: "#main-content"
+  - banner [ref=e3]:
+    - navigation "Main navigation" [ref=e4]:
+      - generic [ref=e5]:
+        - link "</> Div Tag Studios" [ref=e6]:
+          - /url: "#hero"
+          - generic [ref=e8]: </>
+          - generic [ref=e9]: Div Tag Studios
+        - button "Open navigation menu" [ref=e10] [cursor=pointer]:
+          - img
+  - main [ref=e11]:
+    - generic [ref=e13]:
+      - heading "Div Tag Studios" [level=1] [ref=e14]
+      - paragraph [ref=e15]: Turning Pixels into Products
+      - button "View Our Services" [ref=e16] [cursor=pointer]
+    - generic [ref=e18]:
+      - heading "Our Services" [level=2] [ref=e19]
+      - generic [ref=e20]:
+        - generic [ref=e22]:
+          - img [ref=e24]
+          - generic [ref=e28]: Web Development
+          - generic [ref=e29]: Custom web applications built with modern frameworks and best practices. From responsive websites to complex web platforms.
+        - generic [ref=e31]:
+          - img [ref=e33]
+          - generic [ref=e35]: Android Development
+          - generic [ref=e36]: Native Android applications with intuitive interfaces and robust performance. Built with Kotlin and modern Android architecture.
+        - generic [ref=e38]:
+          - img [ref=e40]
+          - generic [ref=e46]: UI/UX Design
+          - generic [ref=e47]: User-centered design solutions that combine aesthetics with functionality. Wireframes, prototypes, and design systems.
+        - generic [ref=e49]:
+          - img [ref=e51]
+          - generic [ref=e55]: Graphic Design
+          - generic [ref=e56]: Visual identity and branding materials that make your business stand out. Logos, marketing materials, and brand guidelines.
+        - generic [ref=e58]:
+          - img [ref=e60]
+          - generic [ref=e63]: Video Editing
+          - generic [ref=e64]: Professional video editing and post-production services. From promotional videos to social media content.
+        - generic [ref=e66]:
+          - img [ref=e68]
+          - generic [ref=e71]: SEO
+          - generic [ref=e72]: Search engine optimization strategies to improve your online visibility. Technical SEO, content optimization, and analytics.
+    - generic [ref=e74]:
+      - heading "About Us" [level=2] [ref=e75]
+      - generic [ref=e76]:
+        - heading "Our Mission" [level=3] [ref=e77]
+        - paragraph [ref=e78]: At Div Tag Studios, we transform ideas into exceptional digital experiences. Our mission is to empower businesses with cutting-edge technology solutions that drive growth and innovation.
+      - generic [ref=e79]:
+        - heading "Our Approach" [level=3] [ref=e80]
+        - list [ref=e81]:
+          - listitem [ref=e82]:
+            - generic [ref=e83]: ✓
+            - generic [ref=e84]: Quality-driven development with attention to every detail
+          - listitem [ref=e85]:
+            - generic [ref=e86]: ✓
+            - generic [ref=e87]: Client-focused approach ensuring your vision comes to life
+          - listitem [ref=e88]:
+            - generic [ref=e89]: ✓
+            - generic [ref=e90]: Innovation at the core of everything we create
+          - listitem [ref=e91]:
+            - generic [ref=e92]: ✓
+            - generic [ref=e93]: Transparent communication throughout the entire process
+    - generic [ref=e95]:
+      - heading "Contact Us" [level=2] [ref=e96]
+      - paragraph [ref=e97]: Have a project in mind? We'd love to hear from you. Send us a message and we'll respond as soon as possible.
+      - generic [ref=e98]:
+        - generic [ref=e100]:
+          - generic [ref=e101]:
+            - generic [ref=e102]: Name *
+            - textbox "Name *" [ref=e103]:
+              - /placeholder: Your full name
+          - generic [ref=e104]:
+            - generic [ref=e105]: Email *
+            - textbox "Email *" [ref=e106]:
+              - /placeholder: your.email@example.com
+          - generic [ref=e107]:
+            - generic [ref=e108]: Service Interest *
+            - combobox "Service Interest *" [ref=e109] [cursor=pointer]:
+              - generic: Select a service
+              - img [ref=e110]
+            - combobox [ref=e112]
+          - generic [ref=e113]:
+            - generic [ref=e114]: Message *
+            - textbox "Message *" [ref=e115]:
+              - /placeholder: Tell us about your project...
+          - button "Send Message" [ref=e116] [cursor=pointer]
+        - generic [ref=e117]:
+          - generic [ref=e118]:
+            - heading "Get in Touch" [level=3] [ref=e119]
+            - paragraph [ref=e120]: Reach out to us directly through any of the following channels. We're here to help bring your ideas to life.
+          - generic [ref=e121]:
+            - generic [ref=e122]:
+              - img [ref=e124]
+              - generic [ref=e127]:
+                - heading "Email" [level=4] [ref=e128]
+                - link "contact@divtagstudios.com" [ref=e129]:
+                  - /url: mailto:contact@divtagstudios.com
+            - generic [ref=e130]:
+              - img [ref=e132]
+              - generic [ref=e134]:
+                - heading "Phone" [level=4] [ref=e135]
+                - link "+1 (555) 123-4567" [ref=e136]:
+                  - /url: tel:+1(555)123-4567
+            - generic [ref=e137]:
+              - img [ref=e139]
+              - generic [ref=e142]:
+                - heading "Address" [level=4] [ref=e143]
+                - paragraph [ref=e144]: 123 Digital Avenue, Tech City, TC 12345
+  - contentinfo [ref=e145]:
+    - generic [ref=e146]:
+      - generic [ref=e147]:
+        - generic [ref=e148]:
+          - heading "Div Tag Studios" [level=3] [ref=e149]
+          - paragraph [ref=e150]: Turning Pixels into Products
+        - generic [ref=e151]:
+          - heading "Contact" [level=3] [ref=e152]
+          - link "contact@divtagstudios.com" [ref=e153]:
+            - /url: mailto:contact@divtagstudios.com
+            - img [ref=e154]
+            - text: contact@divtagstudios.com
+        - generic [ref=e157]:
+          - heading "Follow Us" [level=3] [ref=e158]
+          - generic [ref=e159]:
+            - link "Visit our LinkedIn page" [ref=e160]:
+              - /url: https://linkedin.com/company/divtagstudios
+              - img [ref=e161]
+            - link "Visit our Twitter profile" [ref=e165]:
+              - /url: https://twitter.com/divtagstudios
+              - img [ref=e166]
+            - link "Visit our GitHub profile" [ref=e168]:
+              - /url: https://github.com/divtagstudios
+              - img [ref=e169]
+      - paragraph [ref=e173]: © 2026 Div Tag Studios. All rights reserved.
+  - button "Open Next.js Dev Tools" [ref=e179] [cursor=pointer]:
+    - img [ref=e180]
+  - alert [ref=e185]
+```
