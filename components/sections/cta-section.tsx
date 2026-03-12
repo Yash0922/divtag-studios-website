@@ -17,11 +17,10 @@ export function CTASection() {
   };
 
   return (
-    <section
-      className="py-16 md:py-24 px-4 md:px-6 lg:px-8 text-white"
-      style={{ backgroundColor: 'hsl(var(--cta-bg))' }}
-    >
-      <div className="container mx-auto max-w-4xl text-center">
+    <section className="relative py-16 md:py-24 px-4 md:px-6 lg:px-8 overflow-hidden text-white">
+      {/* Rain pattern background – theme background color */}
+      <div className="cta-rain-pattern" aria-hidden />
+      <div className="container relative z-10 mx-auto max-w-4xl text-center">
         <h2 className="text-3xl md:text-4xl font-bold mb-4">
           Book a discovery call
         </h2>

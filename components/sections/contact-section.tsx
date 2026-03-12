@@ -2,6 +2,7 @@ import { Mail, Phone, MapPin } from 'lucide-react';
 import { ContactForm } from '@/components/contact-form';
 import { CONTACT_INFO } from '@/lib/constants';
 import { SectionReveal } from '@/components/section-reveal';
+import { CodeMatrixBackground } from '@/components/code-matrix-bg';
 
 /**
  * ContactSection component wraps the ContactForm with section layout
@@ -11,9 +12,10 @@ export function ContactSection() {
     <SectionReveal
       as="section"
       id="contact"
-      className="py-16 md:py-24 px-4 md:px-6 lg:px-8 bg-muted/40 dark:bg-muted/20"
+      className="relative py-16 md:py-24 px-4 md:px-6 lg:px-8 overflow-hidden bg-background"
     >
-      <div className="container mx-auto max-w-5xl">
+      <CodeMatrixBackground />
+      <div className="container relative z-10 mx-auto max-w-5xl">
         {/* Section heading with proper hierarchy */}
         <h2 className="text-3xl md:text-4xl font-semibold text-center mb-4">
           Contact Us

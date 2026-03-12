@@ -29,7 +29,7 @@ export function Footer() {
   };
 
   return (
-    <footer className="border-t border-border bg-muted/50 dark:bg-muted/30">
+    <footer className="border-t border-white/10 bg-[rgb(12,18,33)]">
       <div className="container mx-auto px-4 md:px-6 lg:px-8 max-w-7xl py-8 md:py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* Company Info */}
@@ -64,16 +64,28 @@ export function Footer() {
           {/* Social Links */}
           <div>
             <h3 className="font-semibold text-lg mb-4">Follow Us</h3>
-            <div className="flex gap-4">
+            <div className="flex gap-6 flex-wrap">
               <a
                 href="https://linkedin.com/company/divtagstudios"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Visit our LinkedIn page"
                 onKeyDown={(e) => handleKeyDown(e, 'https://linkedin.com/company/divtagstudios')}
-                className="text-muted-foreground hover:text-foreground transition-colors motion-reduce:transition-none focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded-md p-1"
+                className="footer-social-icon focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background rounded-md"
+                style={{ ['--footer-icon-color' as string]: '#0A66C2' }}
               >
-                <Linkedin className="h-5 w-5" />
+                <div className="footer-social-layer">
+                  <span className="footer-social-layer-span" aria-hidden />
+                  <span className="footer-social-layer-span" aria-hidden />
+                  <span className="footer-social-layer-span" aria-hidden />
+                  <span className="footer-social-layer-span" aria-hidden />
+                  <span className="footer-social-layer-span" aria-hidden>
+                    <span className="footer-social-icon-inner">
+                      <Linkedin className="h-6 w-6" />
+                    </span>
+                  </span>
+                </div>
+                <span className="footer-social-label">LinkedIn</span>
               </a>
               <a
                 href="https://twitter.com/divtagstudios"
@@ -81,9 +93,21 @@ export function Footer() {
                 rel="noopener noreferrer"
                 aria-label="Visit our Twitter profile"
                 onKeyDown={(e) => handleKeyDown(e, 'https://twitter.com/divtagstudios')}
-                className="text-muted-foreground hover:text-foreground transition-colors motion-reduce:transition-none focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded-md p-1"
+                className="footer-social-icon focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background rounded-md"
+                style={{ ['--footer-icon-color' as string]: '#1DA1F2' }}
               >
-                <Twitter className="h-5 w-5" />
+                <div className="footer-social-layer">
+                  <span className="footer-social-layer-span" aria-hidden />
+                  <span className="footer-social-layer-span" aria-hidden />
+                  <span className="footer-social-layer-span" aria-hidden />
+                  <span className="footer-social-layer-span" aria-hidden />
+                  <span className="footer-social-layer-span" aria-hidden>
+                    <span className="footer-social-icon-inner">
+                      <Twitter className="h-6 w-6" />
+                    </span>
+                  </span>
+                </div>
+                <span className="footer-social-label">Twitter</span>
               </a>
               <a
                 href="https://github.com/divtagstudios"
@@ -91,9 +115,21 @@ export function Footer() {
                 rel="noopener noreferrer"
                 aria-label="Visit our GitHub profile"
                 onKeyDown={(e) => handleKeyDown(e, 'https://github.com/divtagstudios')}
-                className="text-muted-foreground hover:text-foreground transition-colors motion-reduce:transition-none focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded-md p-1"
+                className="footer-social-icon focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background rounded-md"
+                style={{ ['--footer-icon-color' as string]: '#e6edf3' }}
               >
-                <Github className="h-5 w-5" />
+                <div className="footer-social-layer">
+                  <span className="footer-social-layer-span" aria-hidden />
+                  <span className="footer-social-layer-span" aria-hidden />
+                  <span className="footer-social-layer-span" aria-hidden />
+                  <span className="footer-social-layer-span" aria-hidden />
+                  <span className="footer-social-layer-span" aria-hidden>
+                    <span className="footer-social-icon-inner">
+                      <Github className="h-6 w-6" />
+                    </span>
+                  </span>
+                </div>
+                <span className="footer-social-label">GitHub</span>
               </a>
             </div>
           </div>

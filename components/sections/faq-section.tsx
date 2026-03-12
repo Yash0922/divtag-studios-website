@@ -4,6 +4,8 @@ import { useState } from 'react';
 import { FAQ_ITEMS } from '@/lib/constants';
 import { cn } from '@/lib/utils';
 import { ChevronDown } from 'lucide-react';
+import { CodeMatrixBackground } from '@/components/code-matrix-bg';
+import { SectionReveal } from '@/components/section-reveal';
 
 /**
  * FAQ section – accordion (Weframe-style "Got questions? We got answers")
@@ -12,8 +14,13 @@ export function FAQSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section className="py-16 md:py-24 px-4 md:px-6 lg:px-8">
-      <div className="container mx-auto max-w-3xl">
+    <SectionReveal
+      as="section"
+      stagger
+      className="relative py-16 md:py-24 px-4 md:px-6 lg:px-8 overflow-hidden bg-background"
+    >
+      <CodeMatrixBackground />
+      <div className="container relative z-10 mx-auto max-w-3xl">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
           Got questions? We got answers
         </h2>
@@ -54,6 +61,6 @@ export function FAQSection() {
           })}
         </div>
       </div>
-    </section>
+    </SectionReveal>
   );
 }

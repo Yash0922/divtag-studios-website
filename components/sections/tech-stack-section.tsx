@@ -15,7 +15,7 @@ export function TechStackSection() {
     <SectionReveal
       as="section"
       stagger
-      className="relative py-16 md:py-24 px-4 md:px-6 lg:px-8 overflow-hidden"
+      className="relative py-16 md:py-24 px-4 md:px-6 lg:px-8 overflow-hidden bg-[rgb(12,18,33)]"
     >
       {/* Dot grid + scanline + glitch background */}
       <div className="tech-stack-pattern motion-reduce:[animation:none]" aria-hidden />
