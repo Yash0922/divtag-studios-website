@@ -91,8 +91,7 @@ export const metadata: Metadata = {
     apple: "/0.png",
   },
   verification: {
-    // TODO: Replace with actual Google Search Console verification token
-    // google: "YOUR_GOOGLE_VERIFICATION_TOKEN",
+    google: "skOX9PpDaKHysYiIC57ApZ38gBLWRnRRNj_FHFEjQy8a",
   },
 };
 
