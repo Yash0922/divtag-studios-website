@@ -24,7 +24,7 @@ export function Footer() {
   const handleEmailKeyDown = (e: React.KeyboardEvent<HTMLAnchorElement>) => {
     if (e.key === 'Enter' || e.key === ' ') {
       e.preventDefault();
-      window.location.href = 'mailto:contact@divtagstudios.com';
+      window.location.href = 'mailto:contact@divtagstudios.in';
     }
   };
 
@@ -52,13 +52,22 @@ export function Footer() {
           <div>
             <h3 className="font-semibold text-lg mb-4">Contact</h3>
             <a
-              href="mailto:contact@divtagstudios.com"
+              href="mailto:contact@divtagstudios.in"
               onKeyDown={handleEmailKeyDown}
               className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors motion-reduce:transition-none focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded-md"
             >
               <Mail className="h-4 w-4" />
-              contact@divtagstudios.com
+              contact@divtagstudios.in
             </a>
+            <a
+              href="tel:+917428244306"
+              className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors motion-reduce:transition-none focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded-md mt-2"
+            >
+              +91 7428244306
+            </a>
+            <p className="text-sm text-muted-foreground mt-2">
+              Pratap Vihar, Sector 11,<br />Ghaziabad, UP, India
+            </p>
           </div>
 
           {/* Social Links */}

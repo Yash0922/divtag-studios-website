@@ -125,9 +125,9 @@ export const ABOUT_CONTENT = {
  * Contact information
  */
 export const CONTACT_INFO = {
-  email: 'contact@divtagstudios.com',
-  phone: '+1 (555) 123-4567',
-  address: '123 Digital Avenue, Tech City, TC 12345'
+  email: 'contact@divtagstudios.in',
+  phone: '+91 7428244306',
+  address: 'Pratap Vihar, Sector 11, Ghaziabad, Uttar Pradesh, India'
 };
 
 /** Email address that receives contact form submissions (EmailJS) */

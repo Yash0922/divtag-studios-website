@@ -33,7 +33,7 @@ export function ServicesSection({ className }: { className?: string }) {
       stagger
       className={`relative py-16 md:py-24 px-4 md:px-6 lg:px-8 overflow-hidden bg-background ${className || ''}`}
     >
-      {/* Video background – 20% opacity, blend with theme */}
+      {/* Video background – 0% opacity, blend with theme */}
       <video
         ref={videoRef}
         autoPlay
@@ -41,7 +41,7 @@ export function ServicesSection({ className }: { className?: string }) {
         loop
         playsInline
         aria-hidden
-        className="absolute inset-0 w-full h-full object-cover pointer-events-none opacity-10 transition-[visibility] duration-300"
+        className="absolute inset-0 w-full h-full object-cover pointer-events-none opacity-5 transition-[visibility] duration-300"
         style={{ mixBlendMode: 'screen', isolation: 'isolate' }}
       >
         <source src="/13381565_1920_1080_30fps.mp4" type="video/mp4" />
