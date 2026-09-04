@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import { Navbar } from '@/components/navbar';
 import { HeroSection } from '@/components/sections/hero-section';
 import { TrustedBySection } from '@/components/sections/trusted-by-section';
@@ -10,6 +11,16 @@ import { AboutSection } from '@/components/sections/about-section';
 import { FAQSection } from '@/components/sections/faq-section';
 import { ContactSection } from '@/components/sections/contact-section';
 import { Footer } from '@/components/sections/footer';
+
+/**
+ * Homepage metadata — overrides layout defaults for the root route.
+ * Canonical is explicitly set to https://divtagstudios.in (no trailing slash).
+ */
+export const metadata: Metadata = {
+  alternates: {
+    canonical: 'https://divtagstudios.in',
+  },
+};
 
 /**
  * Home page - Main landing page with all sections

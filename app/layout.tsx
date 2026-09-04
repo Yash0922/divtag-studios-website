@@ -146,7 +146,6 @@ export default function RootLayout({
       "https://github.com/divtagstudios",
     ],
     priceRange: "$$",
-    servesCuisine: undefined,
     hasOfferCatalog: {
       "@type": "OfferCatalog",
       name: "Digital Services",
@@ -169,14 +168,45 @@ export default function RootLayout({
     name: "Div Tag Studios",
     description: "Full-service digital agency in Ghaziabad, India",
     publisher: { "@id": `${siteUrl}/#organization` },
-    potentialAction: {
-      "@type": "SearchAction",
-      target: {
-        "@type": "EntryPoint",
-        urlTemplate: `${siteUrl}/?s={search_term_string}`,
+  };
+
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "What services does Div Tag Studios offer?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "We offer Web Development, Android Development, UI/UX Design, Graphic Design, Video Editing, and SEO. From responsive websites to native mobile apps and brand identity—we cover the full digital product lifecycle.",
+        },
       },
-      "query-input": "required name=search_term_string",
-    },
+      {
+        "@type": "Question",
+        name: "How do I get started on a project?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Reach out via the contact form or email. We'll schedule a short call to understand your goals, scope, and timeline, then provide a clear proposal and next steps.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Do you work with startups and small businesses?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Yes. We work with businesses of all sizes—from startups and SMBs to larger teams. Our approach scales to your needs and budget.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "What is your typical project timeline?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Timelines depend on scope. A simple website might take a few weeks; a custom web app or mobile product can run from a couple of months to longer. We'll outline this in the discovery phase.",
+        },
+      },
+    ],
   };
 
   return (
@@ -189,6 +219,10 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
         />
       </head>
       <body className={inter.className}>

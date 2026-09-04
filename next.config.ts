@@ -1,6 +1,10 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  // Disable X-Powered-By header for security
+  poweredByHeader: false,
+  // Enable gzip/brotli compression
+  compress: true,
   // If you see "SegmentViewNode" / "React Client Manifest" errors in dev, clear .next and restart.
   // If using Turbopack (next dev --turbopack), try running without it: next dev
   images: {

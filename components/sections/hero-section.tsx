@@ -56,14 +56,14 @@ export function HeroSection({ className }: { className?: string }) {
       </video>
 
       <div className="container relative z-10 mx-auto max-w-5xl text-center">
-        <h1 className="sr-only">Div Tag Studios</h1>
-        <p
+        {/* Visible H1 for SEO — styled to match the brand tagline */}
+        <h1
           className="text-sm md:text-base font-medium text-primary uppercase tracking-[0.2em] mb-6 animate-fade-in opacity-0"
           style={{ animationDelay: '0.1s', animationFillMode: 'forwards' }}
         >
           Digital Product Studio
-        </p>
-        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[1.1] tracking-tight text-balance mb-6">
+        </h1>
+        <p className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[1.1] tracking-tight text-balance mb-6">
           <span
             className="block text-gradient-hero animate-fade-in-up opacity-0 pb-2"
             style={{ animationDelay: '0.25s', animationFillMode: 'forwards' }}
@@ -76,7 +76,7 @@ export function HeroSection({ className }: { className?: string }) {
           >
             into Products
           </span>
-        </h2>
+        </p>
         <p
           className="text-lg sm:text-xl text-muted-foreground mb-10 max-w-2xl mx-auto text-balance animate-fade-in-up opacity-0"
           style={{ animationDelay: '0.65s', animationFillMode: 'forwards' }}
