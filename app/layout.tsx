@@ -10,10 +10,10 @@ const inter = Inter({
   variable: "--font-inter",
 });
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.divtagstudios.in";
+const siteUrl = "https://divtagstudios.in";
 
 export const metadata: Metadata = {
-  metadataBase: new URL(siteUrl),
+  metadataBase: new URL("https://divtagstudios.in"),
   title: {
     default: "Div Tag Studios – Web & App Development Agency in Ghaziabad",
     template: "%s | Div Tag Studios",
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: siteUrl,
+    canonical: "https://divtagstudios.in",
   },
   openGraph: {
     title: "Div Tag Studios – Web & App Development Agency in Ghaziabad",

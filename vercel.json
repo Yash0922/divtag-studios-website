@@ -46,9 +46,14 @@
       "source": "/home",
       "destination": "/",
       "permanent": true
+    },
+    {
+      "source": "/lander",
+      "destination": "/",
+      "permanent": true
     }
   ],
   "env": {
-    "NEXT_PUBLIC_SITE_URL": "https://www.divtagstudios.in"
+    "NEXT_PUBLIC_SITE_URL": "https://divtagstudios.in"
   }
 }
