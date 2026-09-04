@@ -1,7 +1,9 @@
 import { MetadataRoute } from 'next';
 
-const siteUrl = 'https://divtagstudios.in';
-
+/**
+ * robots.txt for divtagstudios.in
+ * Allows all crawlers, disallows API routes, references sitemap.
+ */
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: [
@@ -11,6 +13,6 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ['/api/'],
       },
     ],
-    sitemap: `${siteUrl}/sitemap.xml`,
+    sitemap: 'https://divtagstudios.in/sitemap.xml',
   };
 }
