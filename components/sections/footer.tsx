@@ -75,11 +75,11 @@ export function Footer() {
             <h3 className="font-semibold text-lg mb-4">Follow Us</h3>
             <div className="flex gap-6 flex-wrap">
               <a
-                href="https://linkedin.com/company/divtagstudios"
+                href="https://www.linkedin.com/company/div-tag-studios/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Visit our LinkedIn page"
-                onKeyDown={(e) => handleKeyDown(e, 'https://linkedin.com/company/divtagstudios')}
+                onKeyDown={(e) => handleKeyDown(e, 'https://www.linkedin.com/company/div-tag-studios/')}
                 className="footer-social-icon focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background rounded-md"
                 style={{ ['--footer-icon-color' as string]: '#0A66C2' }}
               >
