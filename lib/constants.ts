@@ -177,6 +177,165 @@ export const TECH_STACK = {
   tools: ['Git', 'SEO', 'Analytics'],
 };
 
+/** Portfolio / case study item */
+export interface WorkItem {
+  id: string;
+  title: string;
+  category: string;
+  industry: string;
+  region: string;
+  description: string;
+  highlights: string[];
+  metrics: { value: string; label: string }[];
+  tags: string[];
+  featured?: boolean;
+  image?: string;
+}
+
+/** Work portfolio – featured on homepage, full list on /work */
+export const WORK_ITEMS: WorkItem[] = [
+  {
+    id: 'ecommerce-platform',
+    title: 'E-Commerce Growth Platform',
+    category: 'Web & SaaS',
+    industry: 'E-Commerce',
+    region: 'India',
+    description:
+      'A scalable online storefront and admin dashboard built with Next.js—designed for fast checkout, inventory visibility, and SEO-ready product pages.',
+    image: '/images/work/ecommerce-platform.jpg',
+    highlights: [
+      'Responsive product catalog with advanced filtering',
+      'Admin dashboard for orders, inventory, and analytics',
+      'Performance-optimized for Core Web Vitals and search',
+    ],
+    metrics: [
+      { value: '40%', label: 'Faster page loads' },
+      { value: '2.5×', label: 'Conversion uplift' },
+      { value: '99.9%', label: 'Uptime target' },
+    ],
+    tags: ['Next.js', 'Web Development', 'UI/UX'],
+    featured: true,
+  },
+  {
+    id: 'fitness-mobile-app',
+    title: 'Fitness & Wellness Mobile App',
+    category: 'Mobile',
+    industry: 'Health & Wellness',
+    region: 'India',
+    description:
+      'Native Android experience for workout tracking, progress dashboards, and personalized plans—with a clean UI built for daily engagement.',
+    image: '/images/work/fitness-mobile-app.jpg',
+    highlights: [
+      'Workout plans with progress tracking and reminders',
+      'Offline-friendly session logging',
+      'Material Design UI aligned with brand identity',
+    ],
+    metrics: [
+      { value: '10k+', label: 'Active users' },
+      { value: '4.6★', label: 'Play Store rating' },
+      { value: '35%', label: 'Retention boost' },
+    ],
+    tags: ['Android', 'Kotlin', 'UI/UX'],
+    featured: true,
+  },
+  {
+    id: 'brand-identity-suite',
+    title: 'Brand Identity & Marketing Suite',
+    category: 'Design',
+    industry: 'Startup',
+    region: 'India',
+    description:
+      'End-to-end visual identity—logo system, social templates, and launch assets—for a tech startup entering a competitive market.',
+    image: '/images/work/brand-identity-suite.jpg',
+    highlights: [
+      'Logo, color system, and typography guidelines',
+      'Social and pitch-deck templates',
+      'Cohesive assets for web and print',
+    ],
+    metrics: [
+      { value: '100%', label: 'Brand consistency' },
+      { value: '3×', label: 'Social engagement' },
+      { value: '2wk', label: 'Delivery timeline' },
+    ],
+    tags: ['Graphic Design', 'Branding', 'UI/UX'],
+    featured: true,
+  },
+  {
+    id: 'real-estate-listings',
+    title: 'Property Discovery Web App',
+    category: 'Web & SaaS',
+    industry: 'Real Estate',
+    region: 'India',
+    description:
+      'A property listing platform with map search, saved favorites, and lead capture—built for agents and buyers on any device.',
+    image: '/images/work/real-estate-listings.jpg',
+    highlights: [
+      'Map-based search and rich property detail pages',
+      'Lead forms integrated with CRM workflows',
+      'Mobile-first layout for on-the-go browsing',
+    ],
+    metrics: [
+      { value: '60%', label: 'More qualified leads' },
+      { value: '50%', label: 'Mobile traffic share' },
+      { value: '4wk', label: 'MVP to launch' },
+    ],
+    tags: ['React', 'Web Development', 'SEO'],
+    featured: false,
+  },
+  {
+    id: 'restaurant-ordering',
+    title: 'Restaurant Ordering System',
+    category: 'Web & Mobile',
+    industry: 'Hospitality',
+    region: 'India',
+    description:
+      'Digital menu, online ordering, and kitchen-friendly order flow for a multi-outlet restaurant brand.',
+    image: '/images/work/restaurant-ordering.jpg',
+    highlights: [
+      'QR menu and online ordering flow',
+      'Order status updates for customers',
+      'Simple admin panel for menu management',
+    ],
+    metrics: [
+      { value: '25%', label: 'Order volume increase' },
+      { value: '30%', label: 'Reduced wait times' },
+      { value: '5', label: 'Locations supported' },
+    ],
+    tags: ['Web Development', 'Android', 'UI/UX'],
+    featured: false,
+  },
+  {
+    id: 'seo-growth-campaign',
+    title: 'Technical SEO & Content Growth',
+    category: 'Growth',
+    industry: 'SaaS',
+    region: 'India',
+    description:
+      'Technical SEO audit, site structure improvements, and content strategy for a B2B SaaS product seeking organic growth.',
+    image: '/images/work/seo-growth-campaign.jpg',
+    highlights: [
+      'Core Web Vitals and crawlability fixes',
+      'Keyword-led landing page structure',
+      'Analytics dashboards for organic performance',
+    ],
+    metrics: [
+      { value: '120%', label: 'Organic traffic' },
+      { value: '45%', label: 'Keyword rankings up' },
+      { value: '3mo', label: 'To measurable lift' },
+    ],
+    tags: ['SEO', 'Analytics', 'Web Development'],
+    featured: false,
+  },
+];
+
+/** Stats shown on the work page hero */
+export const WORK_STATS = [
+  { value: '50+', label: 'Projects Delivered' },
+  { value: '6', label: 'Core Services' },
+  { value: '100%', label: 'Client-Focused' },
+  { value: 'India', label: 'Based & Serving Globally' },
+];
+
 /** FAQ items */
 export const FAQ_ITEMS = [
   {

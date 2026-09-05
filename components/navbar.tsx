@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/utils';
 import { MobileNav } from '@/components/mobile-nav';
 
@@ -12,6 +13,8 @@ interface NavbarProps {
 
 const navLinks = [
   { href: '#hero', label: 'Home' },
+  { href: '/work', label: 'Work', isRoute: true },
+  { href: '/blogs', label: 'Blogs', isRoute: true },
   { href: '#services', label: 'Services' },
   { href: '#about', label: 'About' },
   { href: '#contact', label: 'Contact' },
@@ -35,6 +38,8 @@ const ctaHref = '#contact';
  * Requirements: 1.3, 3.1, 3.2, 3.4
  */
 export function Navbar({ className }: NavbarProps) {
+  const pathname = usePathname();
+  const isHome = pathname === '/';
   const [isScrolled, setIsScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const [activeSection, setActiveSection] = useState<string>('hero');
@@ -48,8 +53,10 @@ export function Navbar({ className }: NavbarProps) {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Intersection Observer for active section highlighting
+  // Intersection Observer for active section highlighting (homepage only)
   useEffect(() => {
+    if (!isHome) return;
+
     const observerOptions = {
       root: null,
       rootMargin: '-20% 0px -70% 0px', // Trigger when section is in the middle of viewport
@@ -67,33 +74,40 @@ export function Navbar({ className }: NavbarProps) {
     const observer = new IntersectionObserver(observerCallback, observerOptions);
 
     // Observe all sections
-    const sections = navLinks.map((link) => 
-      document.getElementById(link.href.replace('#', ''))
-    ).filter(Boolean) as HTMLElement[];
+    const sections = navLinks
+      .filter((link) => link.href.startsWith('#'))
+      .map((link) => document.getElementById(link.href.replace('#', '')))
+      .filter(Boolean) as HTMLElement[];
 
     sections.forEach((section) => observer.observe(section));
 
     return () => {
       sections.forEach((section) => observer.unobserve(section));
     };
-  }, []);
+  }, [isHome]);
 
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
-    e.preventDefault();
     setIsOpen(false);
-    
+
+    if (href.startsWith('/') && !href.startsWith('/#')) {
+      return;
+    }
+
+    e.preventDefault();
+
     const targetId = href.replace('#', '');
-    const element = document.getElementById(targetId);
-    
+    const element = isHome ? document.getElementById(targetId) : null;
+
     if (element) {
-      // Respect user's motion preferences
-      const prefersReducedMotion = typeof window !== 'undefined' && window.matchMedia 
-        ? window.matchMedia('(prefers-reduced-motion: reduce)').matches 
+      const prefersReducedMotion = typeof window !== 'undefined' && window.matchMedia
+        ? window.matchMedia('(prefers-reduced-motion: reduce)').matches
         : false;
       element.scrollIntoView({
         behavior: prefersReducedMotion ? 'auto' : 'smooth',
         block: 'start',
       });
+    } else {
+      window.location.href = href.startsWith('#') ? `/${href}` : href;
     }
   };
 
@@ -103,56 +117,62 @@ export function Navbar({ className }: NavbarProps) {
         'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
         'motion-reduce:transition-none',
         isScrolled
-          ? 'bg-background/90 backdrop-blur-md shadow-sm border-b border-border/50'
-          : 'bg-background',
+          ? 'bg-background/85 backdrop-blur-xl shadow-lg shadow-black/20 border-b border-border/60 py-1'
+          : 'bg-background/70 backdrop-blur-md border-b border-border/20 py-2 sm:py-3',
         className
       )}
     >
-      <nav className="container mx-auto px-4 md:px-6 lg:px-8 max-w-7xl" aria-label="Main navigation">
-        <div className="flex min-h-16 h-24 items-center justify-between">
-          {/* Logo - left corner on mobile, larger size; full size on desktop */}
+      <nav className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl" aria-label="Main navigation">
+        <div className="flex h-16 sm:h-18 md:h-20 items-center justify-between gap-4">
+          {/* Logo - enlarged, crisp, and responsive */}
           <Link
-            href="#hero"
-            onClick={(e) => handleNavClick(e, '#hero')}
-            className="flex items-center justify-start shrink-0 self-center text-foreground hover:opacity-90 transition-opacity motion-reduce:transition-none rounded-lg py-1 pr-2 lg:px-1"
+            href="/"
+            className="flex items-center justify-start shrink-0 self-center text-foreground hover:opacity-95 transition-all motion-reduce:transition-none rounded-xl py-1 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary"
             aria-label="Div Tag Studios - Home"
           >
             <Image
               src="/1.png"
               alt="Div Tag Studios"
-              width={400}
-              height={150}
-              className="h-28 w-auto object-contain object-left sm:h-35 md:h-36 lg:h-[15rem]"
+              width={240}
+              height={90}
+              className="h-12 sm:h-14 md:h-16 w-auto object-contain transition-transform duration-200 hover:scale-105"
               priority
             />
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center gap-6">
-            {navLinks.map((link) => {
-              const isActive = activeSection === link.href.replace('#', '');
-              return (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  onClick={(e) => handleNavClick(e, link.href)}
-                  className={cn(
-                    'nav-tab-link inline-block py-3 px-1 min-h-[44px] text-sm font-medium rounded-md',
-                    'transition-colors motion-reduce:transition-none',
-                    'outline-none focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2',
-                    isActive
-                      ? 'text-primary font-semibold'
-                      : 'text-foreground/80 hover:text-foreground'
-                  )}
-                >
-                  {link.label}
-                </Link>
-              );
-            })}
+          <div className="hidden lg:flex items-center gap-2 xl:gap-3">
+            <div className="flex items-center gap-1 p-1.5 rounded-full bg-card/50 border border-border/50 backdrop-blur-md shadow-inner">
+              {navLinks.map((link) => {
+                const sectionId = link.href.replace('#', '').replace(/^\//, '');
+                const isActive = link.href === '/work'
+                  ? pathname === '/work'
+                  : link.href === '/blogs'
+                    ? pathname.startsWith('/blogs')
+                    : isHome && activeSection === sectionId;
+                return (
+                  <Link
+                    key={link.href}
+                    href={link.href.startsWith('#') && !isHome ? `/${link.href}` : link.href}
+                    onClick={(e) => handleNavClick(e, link.href)}
+                    className={cn(
+                      'px-4 py-2 min-h-[40px] text-sm font-medium rounded-full transition-all duration-200 flex items-center justify-center',
+                      'outline-none focus:outline-none focus-visible:ring-2 focus-visible:ring-primary',
+                      isActive
+                        ? 'bg-primary text-primary-foreground font-semibold shadow-sm'
+                        : 'text-muted-foreground hover:text-foreground hover:bg-muted/70'
+                    )}
+                  >
+                    {link.label}
+                  </Link>
+                );
+              })}
+            </div>
+
             <Link
-              href={ctaHref}
-              onClick={(e) => handleNavClick(e, ctaHref)}
-              className="gradient-cta-button inline-flex items-center justify-center min-h-[44px] text-sm font-medium px-6 focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background motion-reduce:transform-none no-underline"
+              href={isHome ? ctaHref : '/#contact'}
+              onClick={(e) => isHome && handleNavClick(e, ctaHref)}
+              className="gradient-cta-button inline-flex items-center justify-center min-h-[44px] text-sm font-medium px-6 ml-2 shadow-md hover:shadow-primary/30 transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background motion-reduce:transform-none no-underline"
             >
               <span className="gradient-cta-text">{ctaLabel}</span>
             </Link>

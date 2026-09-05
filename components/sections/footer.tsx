@@ -31,19 +31,19 @@ export function Footer() {
   return (
     <footer className="border-t border-white/10 bg-[rgb(12,18,33)]">
       <div className="container mx-auto px-4 md:px-6 lg:px-8 max-w-7xl py-8 md:py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div>
-            <Link href="#hero" className="inline-block mb-4 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded-md">
+            <Link href="#hero" className="inline-block mb-4 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded-xl transition-transform hover:scale-105">
               <Image
                 src="/1.png"
                 alt="Div Tag Studios"
-                width={180}
-                height={54}
-                className="h-12 w-auto object-contain"
+                width={220}
+                height={80}
+                className="h-14 sm:h-16 w-auto object-contain"
               />
             </Link>
-            <p className="text-sm text-muted-foreground">
+            <p className="text-sm text-muted-foreground mt-1">
               Turning Pixels into Products
             </p>
           </div>
@@ -68,6 +68,31 @@ export function Footer() {
             <p className="text-sm text-muted-foreground mt-2">
               Pratap Vihar, Sector 11,<br />Ghaziabad, UP, India
             </p>
+          </div>
+
+          {/* Quick links */}
+          <div>
+            <h3 className="font-semibold text-lg mb-4">Explore</h3>
+            <nav className="flex flex-col gap-2" aria-label="Footer navigation">
+              <Link
+                href="/work"
+                className="text-sm text-muted-foreground hover:text-foreground transition-colors motion-reduce:transition-none focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded-md w-fit"
+              >
+                Our Work
+              </Link>
+              <Link
+                href="/blogs"
+                className="text-sm text-muted-foreground hover:text-foreground transition-colors motion-reduce:transition-none focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded-md w-fit"
+              >
+                Blog
+              </Link>
+              <Link
+                href="/#contact"
+                className="text-sm text-muted-foreground hover:text-foreground transition-colors motion-reduce:transition-none focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded-md w-fit"
+              >
+                Contact
+              </Link>
+            </nav>
           </div>
 
           {/* Social Links */}

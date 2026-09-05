@@ -1,6 +1,6 @@
 'use client';
 
-import { Button } from '@/components/ui/button';
+import { CodeMatrixBackground } from '@/components/code-matrix-bg';
 
 /**
  * CTA section – "Book a discovery call" (Weframe-style dark block)
@@ -17,22 +17,21 @@ export function CTASection() {
   };
 
   return (
-    <section className="relative py-16 md:py-24 px-4 md:px-6 lg:px-8 overflow-hidden text-white">
-      {/* Rain pattern background – theme background color */}
-      <div className="cta-rain-pattern" aria-hidden />
+    <section className="relative py-16 md:py-24 px-4 md:px-6 lg:px-8 overflow-hidden bg-background">
+      <CodeMatrixBackground />
       <div className="container relative z-10 mx-auto max-w-4xl text-center">
-        <h2 className="text-3xl md:text-4xl font-bold mb-4">
+        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">
           Book a discovery call
         </h2>
-        <p className="text-lg text-white/90 mb-8 max-w-xl mx-auto">
+        <p className="text-lg text-muted-foreground mb-8 max-w-xl mx-auto">
           Let&apos;s discuss your project and see how we can help you build something great.
         </p>
         <button
           type="button"
           onClick={scrollToContact}
-          className="inline-flex items-center justify-center rounded-full bg-white text-[hsl(var(--cta-bg))] font-medium h-12 px-8 text-base hover:bg-white/95 active:scale-[0.98] transition-all duration-200 motion-reduce:transform-none focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[hsl(var(--cta-bg))]"
+          className="gradient-cta-button motion-reduce:transform-none focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
         >
-          Book Now
+          <span className="gradient-cta-text">Book Now</span>
         </button>
       </div>
     </section>

@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
+import Link from 'next/link';
 
 export function HeroSection({ className }: { className?: string }) {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -84,7 +85,7 @@ export function HeroSection({ className }: { className?: string }) {
           We build digital platforms and experiences that scale—from web and mobile to design and growth.
         </p>
         <div
-          className="animate-fade-in-up opacity-0"
+          className="animate-fade-in-up opacity-0 flex flex-col sm:flex-row items-center justify-center gap-4"
           style={{ animationDelay: '0.85s', animationFillMode: 'forwards' }}
         >
           <button
@@ -94,6 +95,12 @@ export function HeroSection({ className }: { className?: string }) {
           >
             <span className="gradient-cta-text">Book a Call</span>
           </button>
+          <Link
+            href="/work"
+            className="inline-flex items-center justify-center min-h-[48px] rounded-full border border-primary/50 px-8 text-sm font-medium text-foreground hover:bg-primary/10 hover:border-primary transition-colors motion-reduce:transition-none focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+          >
+            Explore Our Work
+          </Link>
         </div>
       </div>
     </section>

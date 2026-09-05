@@ -40,19 +40,23 @@ export function ServiceCard({ title, description, iconName, className }: Service
   return (
     <Card
       className={cn(
-        'rounded-2xl border border-border bg-card shadow-sm',
+        'group rounded-2xl border border-border/70 bg-card/75 backdrop-blur-md shadow-sm h-full flex flex-col justify-between',
         'transition-all duration-300 ease-out',
-        'hover:-translate-y-1 hover:shadow-xl hover:border-primary/30',
+        'hover:-translate-y-1.5 hover:shadow-xl hover:border-primary/40 hover:bg-card/90',
         'motion-reduce:transition-none motion-reduce:hover:transform-none',
         className
       )}
     >
-      <CardHeader>
-        <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10">
+      <CardHeader className="p-6 sm:p-7 flex-1">
+        <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 border border-primary/20 group-hover:scale-105 transition-transform duration-300">
           <Icon className="h-6 w-6 text-primary" />
         </div>
-        <CardTitle className="text-xl text-foreground">{title}</CardTitle>
-        <CardDescription className="mt-2 text-muted-foreground">{description}</CardDescription>
+        <CardTitle className="text-xl sm:text-2xl font-bold text-foreground mb-2.5 group-hover:text-primary transition-colors">
+          {title}
+        </CardTitle>
+        <CardDescription className="text-sm sm:text-base text-muted-foreground leading-relaxed">
+          {description}
+        </CardDescription>
       </CardHeader>
     </Card>
   );

@@ -8,6 +8,7 @@ import { TechStackSection } from '@/components/sections/tech-stack-section';
 import { ServicesSection } from '@/components/sections/services-section';
 import { CTASection } from '@/components/sections/cta-section';
 import { AboutSection } from '@/components/sections/about-section';
+import { BlogPreviewSection } from '@/components/sections/blog-preview-section';
 import { FAQSection } from '@/components/sections/faq-section';
 import { ContactSection } from '@/components/sections/contact-section';
 import { Footer } from '@/components/sections/footer';
@@ -40,6 +41,7 @@ export default function Home() {
         <ServicesSection />
         <CTASection />
         <AboutSection />
+        <BlogPreviewSection />
         <FAQSection />
         <ContactSection />
       </main>
