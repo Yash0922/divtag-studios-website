@@ -10,10 +10,11 @@ const inter = Inter({
   variable: "--font-inter",
 });
 
-const siteUrl = "https://divtagstudios.in";
+// Canonical domain — www is the production domain
+const siteUrl = "https://www.divtagstudios.in";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://divtagstudios.in"),
+  metadataBase: new URL("https://www.divtagstudios.in"),
   title: {
     default: "Div Tag Studios – Web & App Development Agency in Ghaziabad",
     template: "%s | Div Tag Studios",
@@ -21,14 +22,12 @@ export const metadata: Metadata = {
   description:
     "Div Tag Studios is a full-service digital agency in Ghaziabad offering Web Development, Android App Development, UI/UX Design, Graphic Design, Video Editing, and SEO services. Turning Pixels into Products.",
   keywords: [
-    // Primary service keywords
     "web development company Ghaziabad",
     "android app development Ghaziabad",
     "UI UX design agency India",
     "graphic design services Ghaziabad",
     "video editing services India",
     "SEO services Ghaziabad",
-    // AI / generative search keywords
     "best digital agency near me",
     "affordable web development India",
     "mobile app developers Ghaziabad",
@@ -38,9 +37,8 @@ export const metadata: Metadata = {
     "Kotlin Android developers Ghaziabad",
     "brand identity design India",
     "technical SEO experts India",
-    // Brand
     "Div Tag Studios",
-    "divtagstudios.in",
+    "www.divtagstudios.in",
     "Turning Pixels into Products",
   ],
   authors: [{ name: "Div Tag Studios", url: siteUrl }],
@@ -58,14 +56,14 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: "https://divtagstudios.in",
+    canonical: "https://www.divtagstudios.in",
   },
   openGraph: {
     title: "Div Tag Studios – Web & App Development Agency in Ghaziabad",
     description:
       "Full-service digital agency: Web Development, Android Apps, UI/UX, Graphic Design, Video Editing & SEO. Based in Ghaziabad, India.",
     type: "website",
-    url: siteUrl,
+    url: "https://www.divtagstudios.in",
     siteName: "Div Tag Studios",
     locale: "en_IN",
     images: [
@@ -132,7 +130,6 @@ export default function RootLayout({
     },
     geo: {
       "@type": "GeoCoordinates",
-      // TODO: Replace with precise coordinates for Pratap Vihar Sector 11 Ghaziabad
       latitude: "28.6692",
       longitude: "77.4538",
     },

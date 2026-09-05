@@ -14,11 +14,11 @@ import { Footer } from '@/components/sections/footer';
 
 /**
  * Homepage metadata — overrides layout defaults for the root route.
- * Canonical is explicitly set to https://divtagstudios.in (no trailing slash).
+ * Canonical is explicitly set to https://www.divtagstudios.in (www, no trailing slash).
  */
 export const metadata: Metadata = {
   alternates: {
-    canonical: 'https://divtagstudios.in',
+    canonical: 'https://www.divtagstudios.in',
   },
 };
 

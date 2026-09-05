@@ -1,8 +1,10 @@
 import { MetadataRoute } from 'next';
 
 /**
- * robots.txt for divtagstudios.in
- * Allows all crawlers, disallows API routes, references sitemap.
+ * robots.txt for www.divtagstudios.in
+ * Allows all crawlers on public pages.
+ * Disallows API routes (not meant for indexing).
+ * References the canonical www sitemap.
  */
 export default function robots(): MetadataRoute.Robots {
   return {
@@ -13,6 +15,6 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ['/api/'],
       },
     ],
-    sitemap: 'https://divtagstudios.in/sitemap.xml',
+    sitemap: 'https://www.divtagstudios.in/sitemap.xml',
   };
 }

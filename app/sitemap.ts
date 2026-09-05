@@ -1,18 +1,18 @@
 import { MetadataRoute } from 'next';
 
 /**
- * Sitemap for divtagstudios.in
+ * Sitemap for www.divtagstudios.in
  *
- * This is a single-page application. The only public, canonical,
- * indexable route is the homepage. Hash fragments (#services, #about, etc.)
- * are NOT separate pages and MUST NOT be included in the sitemap.
+ * Single-page application — only the homepage is public and indexable.
+ * Hash fragments (#services, #about, etc.) are NOT separate pages.
+ * API routes and error pages are excluded automatically by Next.js.
  *
- * API routes, error pages, and _next/* are excluded automatically.
+ * Canonical domain: https://www.divtagstudios.in
  */
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
-      url: 'https://divtagstudios.in',
+      url: 'https://www.divtagstudios.in',
       lastModified: new Date('2026-09-05'),
       changeFrequency: 'monthly',
       priority: 1.0,

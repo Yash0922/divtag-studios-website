@@ -38,6 +38,12 @@
   ],
   "redirects": [
     {
+      "source": "/(.*)",
+      "has": [{ "type": "host", "value": "divtagstudios.in" }],
+      "destination": "https://www.divtagstudios.in/:path*",
+      "permanent": true
+    },
+    {
       "source": "/index",
       "destination": "/",
       "permanent": true
