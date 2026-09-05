@@ -87,8 +87,13 @@ export const metadata: Metadata = {
     creator: "@divtagstudios",
   },
   icons: {
-    icon: "/1.png",
-    apple: "/0.png",
+    icon: [
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/favicon-32.png', type: 'image/png', sizes: '32x32' },
+      { url: '/favicon-16.png', type: 'image/png', sizes: '16x16' },
+    ],
+    apple: '/0.png',
+    shortcut: '/favicon.ico',
   },
   verification: {
     google: "skOX9PpDaKHysYiIC57ApZ38gBLWRnRRNj_FHFEjQy8a",
@@ -108,7 +113,12 @@ export default function RootLayout({
     description:
       "Full-service digital agency offering Web Development, Android App Development, UI/UX Design, Graphic Design, Video Editing, and SEO services in Ghaziabad, India.",
     url: siteUrl,
-    logo: `${siteUrl}/1.png`,
+    logo: {
+      "@type": "ImageObject",
+      url: `${siteUrl}/1.png`,
+      width: 300,
+      height: 300,
+    },
     image: `${siteUrl}/og-image.png`,
     telephone: "+917428244306",
     email: "contact@divtagstudios.in",
