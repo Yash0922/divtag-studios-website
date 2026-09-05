@@ -119,11 +119,11 @@ export function Footer() {
                 <span className="footer-social-label">Instagram</span>
               </a>
               <a
-                href="https://github.com/divtagstudios"
+                href="https://github.com/Yash0922/divtag-studios-website"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Visit our GitHub profile"
-                onKeyDown={(e) => handleKeyDown(e, 'https://github.com/divtagstudios')}
+                onKeyDown={(e) => handleKeyDown(e, 'https://github.com/Yash0922/divtag-studios-website')}
                 className="footer-social-icon focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background rounded-md"
                 style={{ ['--footer-icon-color' as string]: '#e6edf3' }}
               >

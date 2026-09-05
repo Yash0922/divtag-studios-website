@@ -148,7 +148,7 @@ export default function RootLayout({
     sameAs: [
       "https://www.instagram.com/divtagstudios/",
       "https://linkedin.com/company/divtagstudios",
-      "https://github.com/divtagstudios",
+      "https://github.com/Yash0922/divtag-studios-website",
     ],
     priceRange: "$$",
     hasOfferCatalog: {
