@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { Mail, Linkedin, Twitter, Github } from 'lucide-react';
+import { Mail, Linkedin, Instagram, Github } from 'lucide-react';
 
 /**
  * Footer component displaying copyright, social links, and contact information
@@ -97,13 +97,13 @@ export function Footer() {
                 <span className="footer-social-label">LinkedIn</span>
               </a>
               <a
-                href="https://twitter.com/divtagstudios"
+                href="https://www.instagram.com/divtagstudios/"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Visit our Twitter profile"
-                onKeyDown={(e) => handleKeyDown(e, 'https://twitter.com/divtagstudios')}
+                aria-label="Visit our Instagram profile"
+                onKeyDown={(e) => handleKeyDown(e, 'https://www.instagram.com/divtagstudios/')}
                 className="footer-social-icon focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background rounded-md"
-                style={{ ['--footer-icon-color' as string]: '#1DA1F2' }}
+                style={{ ['--footer-icon-color' as string]: '#E1306C' }}
               >
                 <div className="footer-social-layer">
                   <span className="footer-social-layer-span" aria-hidden />
@@ -112,11 +112,11 @@ export function Footer() {
                   <span className="footer-social-layer-span" aria-hidden />
                   <span className="footer-social-layer-span" aria-hidden>
                     <span className="footer-social-icon-inner">
-                      <Twitter className="h-6 w-6" />
+                      <Instagram className="h-6 w-6" />
                     </span>
                   </span>
                 </div>
-                <span className="footer-social-label">Twitter</span>
+                <span className="footer-social-label">Instagram</span>
               </a>
               <a
                 href="https://github.com/divtagstudios"

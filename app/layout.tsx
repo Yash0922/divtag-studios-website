@@ -81,8 +81,6 @@ export const metadata: Metadata = {
     description:
       "Full-service digital agency: Web, Android, UI/UX, Graphic Design, Video & SEO. Ghaziabad, India.",
     images: ["/og-image.png"],
-    site: "@divtagstudios",
-    creator: "@divtagstudios",
   },
   icons: {
     icon: [
@@ -148,7 +146,7 @@ export default function RootLayout({
       availableLanguage: ["English", "Hindi"],
     },
     sameAs: [
-      "https://twitter.com/divtagstudios",
+      "https://www.instagram.com/divtagstudios/",
       "https://linkedin.com/company/divtagstudios",
       "https://github.com/divtagstudios",
     ],
