@@ -37,7 +37,7 @@ export function HeroSection({ className }: { className?: string }) {
   return (
     <section
       id="hero"
-      className={`relative min-h-screen flex items-center justify-center px-4 md:px-6 lg:px-8 overflow-hidden bg-background ${className || ''}`}
+      className={`relative min-h-screen flex items-center justify-center px-4 md:px-6 lg:px-8 2xl:px-12 3xl:px-16 overflow-hidden bg-background ${className || ''}`}
     >
       {/* Video background: screen blend for dark theme */}
       <video
@@ -56,7 +56,7 @@ export function HeroSection({ className }: { className?: string }) {
         <source src="/14492294_1920_1080_30fps.mp4" type="video/mp4" />
       </video>
 
-      <div className="container relative z-10 mx-auto max-w-5xl text-center">
+      <div className="container relative z-10 mx-auto max-w-5xl 2xl:max-w-6xl text-center">
         {/* Visible H1 for SEO — styled to match the brand tagline */}
         <h1
           className="text-sm md:text-base font-medium text-primary uppercase tracking-[0.2em] mb-6 animate-fade-in opacity-0"

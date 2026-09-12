@@ -21,9 +21,9 @@ export default function WorkPage() {
       <Navbar />
       <main id="main-content" tabIndex={-1} className="focus:outline-none pt-24">
         {/* Hero */}
-        <section className="relative py-16 md:py-24 px-4 md:px-6 lg:px-8 overflow-hidden bg-background">
+        <section className="relative py-16 md:py-24 px-4 md:px-6 lg:px-8 2xl:px-12 3xl:px-16 overflow-hidden bg-background">
           <CodeMatrixBackground />
-          <div className="container relative z-10 mx-auto max-w-7xl">
+          <div className="container relative z-10 mx-auto max-w-[1400px] 2xl:max-w-[1600px] 3xl:max-w-[1800px]">
             <div className="max-w-3xl mb-12 md:mb-16">
               <p className="text-sm font-medium text-primary uppercase tracking-[0.2em] mb-4">
                 Customer Success Stories
@@ -54,9 +54,9 @@ export default function WorkPage() {
         </section>
 
         {/* Case studies grid */}
-        <section className="relative py-16 md:py-24 px-4 md:px-6 lg:px-8 overflow-hidden bg-background border-t border-border/40">
+        <section className="relative py-16 md:py-24 px-4 md:px-6 lg:px-8 2xl:px-12 3xl:px-16 overflow-hidden bg-background border-t border-border/40">
           <div className="success-stories-cyber-pattern" aria-hidden />
-          <div className="container relative z-10 mx-auto max-w-7xl">
+          <div className="container relative z-10 mx-auto max-w-[1400px] 2xl:max-w-[1600px] 3xl:max-w-[1800px]">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {WORK_ITEMS.map((item) => (
                 <WorkCard key={item.id} item={item} />
@@ -66,9 +66,9 @@ export default function WorkPage() {
         </section>
 
         {/* CTA */}
-        <section className="relative py-16 md:py-24 px-4 md:px-6 lg:px-8 overflow-hidden bg-background">
+        <section className="relative py-16 md:py-24 px-4 md:px-6 lg:px-8 2xl:px-12 3xl:px-16 overflow-hidden bg-background">
           <CodeMatrixBackground />
-          <div className="container relative z-10 mx-auto max-w-3xl text-center">
+          <div className="container relative z-10 mx-auto max-w-3xl 2xl:max-w-4xl text-center">
             <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
               Ready to build something great?
             </h2>

@@ -76,6 +76,60 @@
     @apply bg-background text-foreground;
     font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
   }
+
+  /* ── Custom Scrollbar — matches dark purple theme ── */
+
+  /* Firefox */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: hsl(280 70% 45%) hsl(222 47% 11%);
+  }
+
+  /* WebKit (Chrome, Safari, Edge) */
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: hsl(222 47% 9%);
+    border-left: 1px solid hsl(217 33% 16%);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(
+      180deg,
+      hsl(280 70% 50%) 0%,
+      hsl(300 60% 40%) 50%,
+      hsl(280 76% 35%) 100%
+    );
+    border-radius: 10px;
+    border: 2px solid hsl(222 47% 9%);
+    transition: background 0.3s ease;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(
+      180deg,
+      hsl(280 80% 60%) 0%,
+      hsl(328 70% 55%) 50%,
+      hsl(280 76% 45%) 100%
+    );
+    box-shadow: 0 0 8px hsl(280 70% 50% / 0.5);
+  }
+
+  ::-webkit-scrollbar-thumb:active {
+    background: linear-gradient(
+      180deg,
+      hsl(280 90% 65%) 0%,
+      hsl(328 80% 60%) 50%,
+      hsl(280 80% 50%) 100%
+    );
+  }
+
+  ::-webkit-scrollbar-corner {
+    background: hsl(222 47% 9%);
+  }
   
   h1, h2, h3, h4, h5, h6 {
     @apply font-semibold;

@@ -9,10 +9,10 @@ export function ServicesSection({ className }: { className?: string }) {
       as="section"
       id="services"
       stagger
-      className={`relative py-16 sm:py-20 md:py-28 px-4 sm:px-6 lg:px-8 overflow-hidden bg-background ${className || ''}`}
+      className={`relative py-16 sm:py-20 md:py-28 px-4 sm:px-6 lg:px-8 2xl:px-12 3xl:px-16 overflow-hidden bg-background ${className || ''}`}
     >
       <CodeMatrixBackground />
-      <div className="container relative z-10 mx-auto max-w-7xl">
+      <div className="container relative z-10 mx-auto max-w-[1400px] 2xl:max-w-[1600px] 3xl:max-w-[1800px]">
         <div className="text-center max-w-3xl mx-auto mb-12 md:mb-16">
           <p className="text-xs sm:text-sm font-semibold text-primary uppercase tracking-[0.2em] mb-3">
             What We Deliver

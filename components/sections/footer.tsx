@@ -30,7 +30,7 @@ export function Footer() {
 
   return (
     <footer className="border-t border-white/10 bg-[rgb(12,18,33)]">
-      <div className="container mx-auto px-4 md:px-6 lg:px-8 max-w-7xl py-8 md:py-12">
+      <div className="container mx-auto px-4 md:px-6 lg:px-8 2xl:px-12 3xl:px-16 max-w-[1400px] 2xl:max-w-[1600px] 3xl:max-w-[1800px] py-8 md:py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div>
@@ -38,9 +38,9 @@ export function Footer() {
               <Image
                 src="/1.png"
                 alt="Div Tag Studios"
-                width={220}
-                height={80}
-                className="h-14 sm:h-16 w-auto object-contain"
+                width={260}
+                height={95}
+                className="h-14 sm:h-16 lg:h-[4.5rem] 2xl:h-20 w-auto object-contain"
               />
             </Link>
             <p className="text-sm text-muted-foreground mt-1">

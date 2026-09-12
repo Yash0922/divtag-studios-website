@@ -122,8 +122,8 @@ export function Navbar({ className }: NavbarProps) {
         className
       )}
     >
-      <nav className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl" aria-label="Main navigation">
-        <div className="flex h-16 sm:h-18 md:h-20 items-center justify-between gap-4">
+      <nav className="container mx-auto px-4 sm:px-6 lg:px-8 2xl:px-12 3xl:px-16 max-w-[1400px] 2xl:max-w-[1600px] 3xl:max-w-[1800px]" aria-label="Main navigation">
+        <div className="flex h-16 sm:h-18 md:h-20 lg:h-[5.5rem] items-center justify-between gap-4">
           {/* Logo - enlarged, crisp, and responsive */}
           <Link
             href="/"
@@ -133,16 +133,16 @@ export function Navbar({ className }: NavbarProps) {
             <Image
               src="/1.png"
               alt="Div Tag Studios"
-              width={240}
-              height={90}
-              className="h-12 sm:h-14 md:h-16 w-auto object-contain transition-transform duration-200 hover:scale-105"
+              width={280}
+              height={100}
+              className="h-14 sm:h-[3.75rem] md:h-[4.25rem] lg:h-[4.5rem] xl:h-[4.75rem] 2xl:h-20 w-auto object-contain transition-transform duration-200 hover:scale-105"
               priority
             />
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center gap-2 xl:gap-3">
-            <div className="flex items-center gap-1 p-1.5 rounded-full bg-card/50 border border-border/50 backdrop-blur-md shadow-inner">
+          <div className="hidden lg:flex items-center gap-2 xl:gap-3 2xl:gap-4">
+            <div className="flex items-center gap-1 xl:gap-1.5 p-1.5 rounded-full bg-card/50 border border-border/50 backdrop-blur-md shadow-inner">
               {navLinks.map((link) => {
                 const sectionId = link.href.replace('#', '').replace(/^\//, '');
                 const isActive = link.href === '/work'
@@ -156,7 +156,7 @@ export function Navbar({ className }: NavbarProps) {
                     href={link.href.startsWith('#') && !isHome ? `/${link.href}` : link.href}
                     onClick={(e) => handleNavClick(e, link.href)}
                     className={cn(
-                      'px-4 py-2 min-h-[40px] text-sm font-medium rounded-full transition-all duration-200 flex items-center justify-center',
+                      'px-4 py-2 xl:px-5 2xl:px-6 min-h-[40px] text-sm xl:text-[0.9375rem] font-medium rounded-full transition-all duration-200 flex items-center justify-center',
                       'outline-none focus:outline-none focus-visible:ring-2 focus-visible:ring-primary',
                       isActive
                         ? 'bg-primary text-primary-foreground font-semibold shadow-sm'
@@ -172,7 +172,7 @@ export function Navbar({ className }: NavbarProps) {
             <Link
               href={isHome ? ctaHref : '/#contact'}
               onClick={(e) => isHome && handleNavClick(e, ctaHref)}
-              className="gradient-cta-button inline-flex items-center justify-center min-h-[44px] text-sm font-medium px-6 ml-2 shadow-md hover:shadow-primary/30 transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background motion-reduce:transform-none no-underline"
+              className="gradient-cta-button inline-flex items-center justify-center min-h-[44px] text-sm xl:text-[0.9375rem] font-medium px-6 xl:px-7 ml-2 shadow-md hover:shadow-primary/30 transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background motion-reduce:transform-none no-underline"
             >
               <span className="gradient-cta-text">{ctaLabel}</span>
             </Link>

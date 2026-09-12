@@ -47,9 +47,9 @@ export function MobileNav({
             <Image
               src="/1.png"
               alt="Div Tag Studios"
-              width={160}
-              height={60}
-              className="h-12 w-auto object-contain"
+              width={200}
+              height={75}
+              className="h-14 w-auto object-contain"
             />
           </div>
           <nav className="flex flex-col gap-2 mt-6" aria-label="Mobile navigation">

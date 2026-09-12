@@ -13,6 +13,8 @@ const config: Config = {
         mobile: "320px",
         tablet: "768px",
         desktop: "1024px",
+        "2xl": "1536px",
+        "3xl": "1920px",
       },
       minHeight: {
         "touch-target": "44px",

@@ -28,7 +28,7 @@ export function WhyChooseSection() {
     <SectionReveal
       as="section"
       stagger
-      className="relative py-16 md:py-24 px-4 md:px-6 lg:px-8 overflow-hidden bg-card/90 border-y border-primary/40"
+      className="relative py-16 md:py-24 px-4 md:px-6 lg:px-8 2xl:px-12 3xl:px-16 overflow-hidden bg-card/90 border-y border-primary/40"
     >
       {/* Matrix code-rain background – code characters only */}
       <div className="matrix-rain-container" aria-hidden>
@@ -47,7 +47,7 @@ export function WhyChooseSection() {
         </div>
       </div>
 
-      <div className="container relative z-10 mx-auto max-w-7xl">
+      <div className="container relative z-10 mx-auto max-w-[1400px] 2xl:max-w-[1600px] 3xl:max-w-[1800px]">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 md:mb-16 text-foreground">
           Why choose Div Tag Studios?
         </h2>

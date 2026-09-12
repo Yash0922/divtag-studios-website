@@ -14,10 +14,10 @@ export function BlogPreviewSection() {
     <SectionReveal
       as="section"
       stagger
-      className="relative py-16 md:py-24 px-4 md:px-6 lg:px-8 overflow-hidden bg-background"
+      className="relative py-16 md:py-24 px-4 md:px-6 lg:px-8 2xl:px-12 3xl:px-16 overflow-hidden bg-background"
     >
       <div className="success-stories-cyber-pattern" aria-hidden />
-      <div className="container relative z-10 mx-auto max-w-7xl">
+      <div className="container relative z-10 mx-auto max-w-[1400px] 2xl:max-w-[1600px] 3xl:max-w-[1800px]">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12">
           <div>
             <p className="text-sm font-medium text-primary uppercase tracking-[0.2em] mb-3">

@@ -11,10 +11,10 @@ export function AboutSection() {
     <SectionReveal
       as="section"
       id="about"
-      className="relative py-16 md:py-24 px-4 md:px-6 lg:px-8 overflow-hidden bg-background"
+      className="relative py-16 md:py-24 px-4 md:px-6 lg:px-8 2xl:px-12 3xl:px-16 overflow-hidden bg-background"
     >
       <CodeMatrixBackground />
-      <div className="container relative z-10 mx-auto max-w-4xl">
+      <div className="container relative z-10 mx-auto max-w-4xl 2xl:max-w-5xl">
         <header className="text-center mb-12 md:mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground">
             About Us

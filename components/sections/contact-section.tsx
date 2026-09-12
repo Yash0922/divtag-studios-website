@@ -12,10 +12,10 @@ export function ContactSection() {
     <SectionReveal
       as="section"
       id="contact"
-      className="relative py-16 md:py-24 px-4 md:px-6 lg:px-8 overflow-hidden bg-background"
+      className="relative py-16 md:py-24 px-4 md:px-6 lg:px-8 2xl:px-12 3xl:px-16 overflow-hidden bg-background"
     >
       <CodeMatrixBackground />
-      <div className="container relative z-10 mx-auto max-w-5xl">
+      <div className="container relative z-10 mx-auto max-w-5xl 2xl:max-w-6xl">
         {/* Section heading with proper hierarchy */}
         <h2 className="text-3xl md:text-4xl font-semibold text-center mb-4">
           Contact Us

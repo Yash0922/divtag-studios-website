@@ -19,9 +19,9 @@ export default function BlogsPage() {
     <>
       <Navbar />
       <main id="main-content" tabIndex={-1} className="focus:outline-none pt-24">
-        <section className="relative py-16 md:py-24 px-4 md:px-6 lg:px-8 overflow-hidden bg-background">
+        <section className="relative py-16 md:py-24 px-4 md:px-6 lg:px-8 2xl:px-12 3xl:px-16 overflow-hidden bg-background">
           <CodeMatrixBackground />
-          <div className="container relative z-10 mx-auto max-w-7xl">
+          <div className="container relative z-10 mx-auto max-w-[1400px] 2xl:max-w-[1600px] 3xl:max-w-[1800px]">
             <p className="text-sm font-medium text-primary uppercase tracking-[0.2em] mb-4">
               All articles
             </p>
@@ -35,16 +35,16 @@ export default function BlogsPage() {
           </div>
         </section>
 
-        <section className="relative py-12 md:py-16 px-4 md:px-6 lg:px-8 overflow-hidden bg-background border-t border-border/40">
+        <section className="relative py-12 md:py-16 px-4 md:px-6 lg:px-8 2xl:px-12 3xl:px-16 overflow-hidden bg-background border-t border-border/40">
           <div className="success-stories-cyber-pattern" aria-hidden />
-          <div className="container relative z-10 mx-auto max-w-7xl">
+          <div className="container relative z-10 mx-auto max-w-[1400px] 2xl:max-w-[1600px] 3xl:max-w-[1800px]">
             <BlogListing />
           </div>
         </section>
 
-        <section className="relative py-16 md:py-20 px-4 md:px-6 lg:px-8 overflow-hidden bg-background">
+        <section className="relative py-16 md:py-20 px-4 md:px-6 lg:px-8 2xl:px-12 3xl:px-16 overflow-hidden bg-background">
           <CodeMatrixBackground />
-          <div className="container relative z-10 mx-auto max-w-3xl text-center">
+          <div className="container relative z-10 mx-auto max-w-3xl 2xl:max-w-4xl text-center">
             <h2 className="text-2xl font-bold text-foreground mb-4">Want help shipping your product?</h2>
             <p className="text-muted-foreground mb-8">
               We turn these ideas into live web and mobile products—let&apos;s talk about your project.
