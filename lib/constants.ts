@@ -7,6 +7,7 @@ import {
  */
 export interface Service {
   id: string;                    // Unique identifier (kebab-case)
+  slug?: string;                 // Dedicated local page slug
   title: string;                 // Display name
   description: string;           // Brief description (2-3 sentences)
   iconName: string;              // Icon name from Lucide (not the component itself)
@@ -19,45 +20,51 @@ export interface Service {
 export const SERVICES: Service[] = [
   {
     id: 'web-development',
+    slug: 'web-development-ghaziabad',
     title: 'Web Development',
-    description: 'Custom web applications built with modern frameworks and best practices. From responsive websites to complex web platforms.',
+    description: 'Custom web applications built with modern frameworks and best practices. From responsive websites to complex web platforms in Ghaziabad and NCR.',
     iconName: 'Code2',
-    keywords: ['web development', 'react', 'next.js', 'frontend', 'backend']
+    keywords: ['web development', 'react', 'next.js', 'frontend', 'backend', 'ghaziabad']
   },
   {
     id: 'android-development',
+    slug: 'android-app-development-ghaziabad',
     title: 'Android Development',
     description: 'Native Android applications with intuitive interfaces and robust performance. Built with Kotlin and modern Android architecture.',
     iconName: 'Smartphone',
-    keywords: ['android', 'mobile app', 'kotlin', 'native development']
+    keywords: ['android', 'mobile app', 'kotlin', 'native development', 'ghaziabad']
   },
   {
     id: 'ui-ux-design',
+    slug: 'ui-ux-design-ghaziabad',
     title: 'UI/UX Design',
-    description: 'User-centered design solutions that combine aesthetics with functionality. Wireframes, prototypes, and design systems.',
+    description: 'User-centered design solutions that combine aesthetics with functionality. Wireframes, prototypes, and scalable Figma design systems.',
     iconName: 'Palette',
     keywords: ['ui design', 'ux design', 'user experience', 'figma', 'prototyping']
   },
   {
     id: 'graphic-design',
+    slug: 'graphic-design-ghaziabad',
     title: 'Graphic Design',
-    description: 'Visual identity and branding materials that make your business stand out. Logos, marketing materials, and brand guidelines.',
+    description: 'Visual identity and branding materials that make your business stand out. Logos, marketing collateral, and comprehensive brand guidelines.',
     iconName: 'Image',
     keywords: ['graphic design', 'branding', 'logo design', 'visual identity']
   },
   {
     id: 'video-editing',
+    slug: 'video-editing-ghaziabad',
     title: 'Video Editing',
-    description: 'Professional video editing and post-production services. From promotional videos to social media content.',
+    description: 'Professional video editing and post-production services. From promotional reels and product demos to corporate brand storytelling.',
     iconName: 'Video',
     keywords: ['video editing', 'post-production', 'motion graphics', 'video content']
   },
   {
     id: 'seo',
-    title: 'SEO',
-    description: 'Search engine optimization strategies to improve your online visibility. Technical SEO, content optimization, and analytics.',
+    slug: 'seo-services-ghaziabad',
+    title: 'SEO Services',
+    description: 'Search engine optimization strategies to dominate local and organic search. Google Business Profile, technical SEO, and content growth.',
     iconName: 'TrendingUp',
-    keywords: ['seo', 'search optimization', 'google ranking', 'digital marketing']
+    keywords: ['seo', 'search optimization', 'google ranking', 'local seo ghaziabad']
   }
 ];
 
@@ -339,19 +346,33 @@ export const WORK_STATS = [
 /** FAQ items */
 export const FAQ_ITEMS = [
   {
-    question: 'What services does Div Tag Studios offer?',
-    answer: 'We offer Web Development, Android Development, UI/UX Design, Graphic Design, Video Editing, and SEO. From responsive websites to native mobile apps and brand identity—we cover the full digital product lifecycle.',
+    question: 'Do you serve businesses in Ghaziabad and Delhi NCR?',
+    answer:
+      'Yes, absolutely. Div Tag Studios is based in Pratap Vihar, Sector 11, Ghaziabad. We work closely with local startups, manufacturing units, retail brands, and service businesses across Ghaziabad (Indirapuram, Vaishali, Vasundhara, Raj Nagar Extension), Noida, and greater Delhi NCR, as well as clients across India and globally.',
   },
   {
-    question: 'How do I get started on a project?',
-    answer: 'Reach out via the contact form or email. We\'ll schedule a short call to understand your goals, scope, and timeline, then provide a clear proposal and next steps.',
+    question: 'What services does Div Tag Studios offer?',
+    answer:
+      'We offer full-cycle digital solutions: Web Development (Next.js, React, Node.js), Native Android App Development (Kotlin, Flutter), UI/UX Design (Figma prototypes and design systems), Graphic Design & Brand Identity, High-Impact Video Editing, and Technical & Local SEO.',
+  },
+  {
+    question: 'How long does website or app development take?',
+    answer:
+      'Timelines depend on project scope. A modern business website usually takes 3 to 5 weeks from discovery to launch. Custom web apps and native Android applications typically take 6 to 12 weeks. We provide clear milestone timelines during our initial consultation.',
+  },
+  {
+    question: 'Do you provide maintenance and updates after launch?',
+    answer:
+      'Yes. Every project includes 30 days of complimentary post-launch support, security audits, and bug fixes. We also provide ongoing monthly maintenance retainers covering feature enhancements, server monitoring, backups, and speed optimization.',
   },
   {
     question: 'Do you work with startups and small businesses?',
-    answer: 'Yes. We work with businesses of all sizes—from startups and SMBs to larger teams. Our approach scales to your needs and budget.',
+    answer:
+      'Yes! A large portion of our portfolio consists of early-stage startups and small-to-medium businesses. We architect lean MVPs designed to validate ideas and scale sustainably within your budget.',
   },
   {
-    question: 'What is your typical project timeline?',
-    answer: 'Timelines depend on scope. A simple website might take a few weeks; a custom web app or mobile product can run from a couple of months to longer. We\'ll outline this in the discovery phase.',
+    question: 'How do I get started on a project?',
+    answer:
+      'Reach out via our contact form, email contact@divtagstudios.in, or WhatsApp/call +91 7428244306. We will schedule a discovery call to understand your objectives, provide a scope breakdown, and share an itemized quote within 24–48 hours.',
   },
 ];

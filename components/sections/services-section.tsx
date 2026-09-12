@@ -21,7 +21,7 @@ export function ServicesSection({ className }: { className?: string }) {
             Our Services
           </h2>
           <p className="text-muted-foreground text-base sm:text-lg leading-relaxed">
-            From web and mobile engineering to UI/UX design and technical SEO—we cover every stage of the digital product lifecycle.
+            From web and mobile engineering to UI/UX design and technical SEO—tailored digital solutions for businesses in Ghaziabad and across India.
           </p>
         </div>
 
@@ -29,6 +29,7 @@ export function ServicesSection({ className }: { className?: string }) {
           {SERVICES.map((service) => (
             <ServiceCard
               key={service.id}
+              slug={service.slug}
               title={service.title}
               description={service.description}
               iconName={service.iconName}

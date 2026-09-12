@@ -14,10 +14,14 @@ const iconMap = {
   TrendingUp,
 };
 
+import Link from 'next/link';
+import { ArrowRight } from 'lucide-react';
+
 interface ServiceCardProps {
   title: string;
   description: string;
   iconName: string;
+  slug?: string;
   className?: string;
 }
 
@@ -26,16 +30,12 @@ interface ServiceCardProps {
  * 
  * Features:
  * - Displays service title, description, and icon
+ * - Link to dedicated service landing page
  * - Hover effect with lift animation (translateY) and shadow increase
  * - Built on shadcn/ui Card component
  * - Client component for interactive hover states
- * 
- * @param title - Service name
- * @param description - Service description
- * @param iconName - Name of the Lucide icon to display
- * @param className - Optional additional CSS classes
  */
-export function ServiceCard({ title, description, iconName, className }: ServiceCardProps) {
+export function ServiceCard({ title, description, iconName, slug, className }: ServiceCardProps) {
   const Icon = iconMap[iconName as keyof typeof iconMap];
   return (
     <Card
@@ -58,6 +58,18 @@ export function ServiceCard({ title, description, iconName, className }: Service
           {description}
         </CardDescription>
       </CardHeader>
+
+      {slug && (
+        <div className="px-6 sm:px-7 pb-6 pt-0 mt-auto">
+          <Link
+            href={`/services/${slug}`}
+            className="inline-flex items-center text-xs sm:text-sm font-semibold text-primary hover:text-primary/80 transition-colors group/link"
+          >
+            Explore Service &amp; Process
+            <ArrowRight className="h-3.5 w-3.5 ml-1.5 transition-transform duration-200 group-hover/link:translate-x-1" />
+          </Link>
+        </div>
+      )}
     </Card>
   );
 }

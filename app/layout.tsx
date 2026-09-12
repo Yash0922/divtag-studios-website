@@ -104,7 +104,7 @@ export default function RootLayout({
 }>) {
   const organizationSchema = {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
+    "@type": ["ProfessionalService", "LocalBusiness"],
     "@id": `${siteUrl}/#organization`,
     name: "Div Tag Studios",
     description:
@@ -117,7 +117,7 @@ export default function RootLayout({
       height: 300,
     },
     image: `${siteUrl}/og-image.png`,
-    telephone: "+917428244306",
+    telephone: "+91 7428244306",
     email: "contact@divtagstudios.in",
     address: {
       "@type": "PostalAddress",
@@ -140,10 +140,10 @@ export default function RootLayout({
     },
     contactPoint: {
       "@type": "ContactPoint",
-      telephone: "+917428244306",
+      telephone: "+91 7428244306",
       email: "contact@divtagstudios.in",
       contactType: "customer service",
-      areaServed: "IN",
+      areaServed: ["Ghaziabad", "Noida", "Delhi NCR", "IN"],
       availableLanguage: ["English", "Hindi"],
     },
     sameAs: [
@@ -151,17 +151,59 @@ export default function RootLayout({
       "https://www.linkedin.com/company/div-tag-studios/",
       "https://github.com/Yash0922/divtag-studios-website",
     ],
-    priceRange: "$$",
+    priceRange: "₹₹",
     hasOfferCatalog: {
       "@type": "OfferCatalog",
-      name: "Digital Services",
+      name: "Digital Services in Ghaziabad",
       itemListElement: [
-        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Web Development" } },
-        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Android App Development" } },
-        { "@type": "Offer", itemOffered: { "@type": "Service", name: "UI/UX Design" } },
-        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Graphic Design" } },
-        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Video Editing" } },
-        { "@type": "Offer", itemOffered: { "@type": "Service", name: "SEO Services" } },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Web Development Company in Ghaziabad",
+            url: `${siteUrl}/services/web-development-ghaziabad`,
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Android App Development Company in Ghaziabad",
+            url: `${siteUrl}/services/android-app-development-ghaziabad`,
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "UI/UX Design Agency in Ghaziabad",
+            url: `${siteUrl}/services/ui-ux-design-ghaziabad`,
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Graphic Design Agency in Ghaziabad",
+            url: `${siteUrl}/services/graphic-design-ghaziabad`,
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Video Editing Services in Ghaziabad",
+            url: `${siteUrl}/services/video-editing-ghaziabad`,
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "SEO Company in Ghaziabad",
+            url: `${siteUrl}/services/seo-services-ghaziabad`,
+          },
+        },
       ],
     },
   };
@@ -182,18 +224,34 @@ export default function RootLayout({
     mainEntity: [
       {
         "@type": "Question",
-        name: "What services does Div Tag Studios offer?",
+        name: "Do you serve businesses in Ghaziabad and Delhi NCR?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "We offer Web Development, Android Development, UI/UX Design, Graphic Design, Video Editing, and SEO. From responsive websites to native mobile apps and brand identity—we cover the full digital product lifecycle.",
+          text: "Yes, absolutely. Div Tag Studios is based in Pratap Vihar, Sector 11, Ghaziabad. We work closely with local startups, manufacturing units, retail brands, and service businesses across Ghaziabad, Noida, and greater Delhi NCR, as well as clients across India and globally.",
         },
       },
       {
         "@type": "Question",
-        name: "How do I get started on a project?",
+        name: "What services does Div Tag Studios offer?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Reach out via the contact form or email. We'll schedule a short call to understand your goals, scope, and timeline, then provide a clear proposal and next steps.",
+          text: "We offer full-cycle digital solutions: Web Development (Next.js, React, Node.js), Native Android App Development (Kotlin, Flutter), UI/UX Design (Figma prototypes and design systems), Graphic Design & Brand Identity, High-Impact Video Editing, and Technical & Local SEO.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "How long does website or app development take?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Timelines depend on project scope. A modern business website usually takes 3 to 5 weeks from discovery to launch. Custom web apps and native Android applications typically take 6 to 12 weeks.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Do you provide maintenance and updates after launch?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Yes. Every project includes 30 days of complimentary post-launch support, security audits, and bug fixes. We also provide ongoing monthly maintenance retainers covering feature enhancements, server monitoring, backups, and speed optimization.",
         },
       },
       {
@@ -201,15 +259,15 @@ export default function RootLayout({
         name: "Do you work with startups and small businesses?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Yes. We work with businesses of all sizes—from startups and SMBs to larger teams. Our approach scales to your needs and budget.",
+          text: "Yes! A large portion of our portfolio consists of early-stage startups and small-to-medium businesses. We architect lean MVPs designed to validate ideas and scale sustainably within your budget.",
         },
       },
       {
         "@type": "Question",
-        name: "What is your typical project timeline?",
+        name: "How do I get started on a project?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Timelines depend on scope. A simple website might take a few weeks; a custom web app or mobile product can run from a couple of months to longer. We'll outline this in the discovery phase.",
+          text: "Reach out via our contact form, email contact@divtagstudios.in, or WhatsApp/call +91 7428244306. We will schedule a discovery call to understand your objectives, provide a scope breakdown, and share an itemized quote within 24–48 hours.",
         },
       },
     ],

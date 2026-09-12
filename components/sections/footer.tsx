@@ -31,10 +31,10 @@ export function Footer() {
   return (
     <footer className="border-t border-white/10 bg-[rgb(12,18,33)]">
       <div className="container mx-auto px-4 md:px-6 lg:px-8 2xl:px-12 3xl:px-16 max-w-[1400px] 2xl:max-w-[1600px] 3xl:max-w-[1800px] py-8 md:py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Company Info */}
-          <div>
-            <Link href="#hero" className="inline-block mb-4 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded-xl transition-transform hover:scale-105">
+          <div className="lg:col-span-1">
+            <Link href="/" className="inline-block mb-4 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded-xl transition-transform hover:scale-105">
               <Image
                 src="/1.png"
                 alt="Div Tag Studios"
@@ -46,33 +46,57 @@ export function Footer() {
             <p className="text-sm text-muted-foreground mt-1">
               Turning Pixels into Products
             </p>
+            <p className="text-xs text-muted-foreground/80 mt-2">
+              Full-Service Web, Mobile &amp; Growth Agency in Ghaziabad.
+            </p>
           </div>
 
-          {/* Contact */}
+          {/* Local Services Links */}
           <div>
-            <h3 className="font-semibold text-lg mb-4">Contact</h3>
-            <a
-              href="mailto:contact@divtagstudios.in"
-              onKeyDown={handleEmailKeyDown}
-              className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors motion-reduce:transition-none focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded-md"
-            >
-              <Mail className="h-4 w-4" />
-              contact@divtagstudios.in
-            </a>
-            <a
-              href="tel:+917428244306"
-              className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors motion-reduce:transition-none focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded-md mt-2"
-            >
-              +91 7428244306
-            </a>
-            <p className="text-sm text-muted-foreground mt-2">
-              Pratap Vihar, Sector 11,<br />Ghaziabad, UP, India
-            </p>
+            <h3 className="font-semibold text-lg mb-4 text-foreground">Services</h3>
+            <nav className="flex flex-col gap-2" aria-label="Services navigation">
+              <Link
+                href="/services/web-development-ghaziabad"
+                className="text-sm text-muted-foreground hover:text-foreground transition-colors w-fit"
+              >
+                Web Development
+              </Link>
+              <Link
+                href="/services/android-app-development-ghaziabad"
+                className="text-sm text-muted-foreground hover:text-foreground transition-colors w-fit"
+              >
+                Android Apps
+              </Link>
+              <Link
+                href="/services/ui-ux-design-ghaziabad"
+                className="text-sm text-muted-foreground hover:text-foreground transition-colors w-fit"
+              >
+                UI/UX Design
+              </Link>
+              <Link
+                href="/services/graphic-design-ghaziabad"
+                className="text-sm text-muted-foreground hover:text-foreground transition-colors w-fit"
+              >
+                Graphic Design
+              </Link>
+              <Link
+                href="/services/video-editing-ghaziabad"
+                className="text-sm text-muted-foreground hover:text-foreground transition-colors w-fit"
+              >
+                Video Editing
+              </Link>
+              <Link
+                href="/services/seo-services-ghaziabad"
+                className="text-sm text-muted-foreground hover:text-foreground transition-colors w-fit"
+              >
+                SEO Services
+              </Link>
+            </nav>
           </div>
 
           {/* Quick links */}
           <div>
-            <h3 className="font-semibold text-lg mb-4">Explore</h3>
+            <h3 className="font-semibold text-lg mb-4 text-foreground">Explore</h3>
             <nav className="flex flex-col gap-2" aria-label="Footer navigation">
               <Link
                 href="/work"
@@ -84,7 +108,7 @@ export function Footer() {
                 href="/blogs"
                 className="text-sm text-muted-foreground hover:text-foreground transition-colors motion-reduce:transition-none focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded-md w-fit"
               >
-                Blog
+                Blog &amp; Insights
               </Link>
               <Link
                 href="/#contact"
@@ -95,9 +119,31 @@ export function Footer() {
             </nav>
           </div>
 
+          {/* Contact */}
+          <div>
+            <h3 className="font-semibold text-lg mb-4 text-foreground">Contact</h3>
+            <a
+              href="mailto:contact@divtagstudios.in"
+              onKeyDown={handleEmailKeyDown}
+              className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors motion-reduce:transition-none focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded-md"
+            >
+              <Mail className="h-4 w-4 shrink-0" />
+              contact@divtagstudios.in
+            </a>
+            <a
+              href="tel:+917428244306"
+              className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors motion-reduce:transition-none focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded-md mt-2"
+            >
+              +91 7428244306
+            </a>
+            <p className="text-sm text-muted-foreground mt-2 leading-relaxed">
+              Pratap Vihar, Sector 11,<br />Ghaziabad, UP 201009, India
+            </p>
+          </div>
+
           {/* Social Links */}
           <div>
-            <h3 className="font-semibold text-lg mb-4">Follow Us</h3>
+            <h3 className="font-semibold text-lg mb-4 text-foreground">Follow Us</h3>
             <div className="flex gap-6 flex-wrap">
               <a
                 href="https://www.linkedin.com/company/div-tag-studios/"
