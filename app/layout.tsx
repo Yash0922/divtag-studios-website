@@ -69,7 +69,7 @@ export const metadata: Metadata = {
     locale: "en_IN",
     images: [
       {
-        url: "/og-image.png",
+        url: "https://www.divtagstudios.in/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "Div Tag Studios – Turning Pixels into Products",
@@ -81,16 +81,22 @@ export const metadata: Metadata = {
     title: "Div Tag Studios – Web & App Development Agency in Ghaziabad",
     description:
       "Full-service digital agency: Web, Android, UI/UX, Graphic Design, Video & SEO. Ghaziabad, India.",
-    images: ["/og-image.png"],
+    images: ["https://www.divtagstudios.in/og-image.jpg"],
   },
   icons: {
     icon: [
-      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/favicon.ico', sizes: 'any', type: 'image/x-icon' },
       { url: '/favicon-32.png', type: 'image/png', sizes: '32x32' },
       { url: '/favicon-16.png', type: 'image/png', sizes: '16x16' },
+      { url: '/icon-192.png', type: 'image/png', sizes: '192x192' },
     ],
-    apple: '/0.png',
+    apple: [
+      { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
+    ],
     shortcut: '/favicon.ico',
+    other: [
+      { rel: 'manifest', url: '/site.webmanifest' },
+    ],
   },
   verification: {
     google: "skOX9PpDaKHysYiIC57ApZ38gBLWRnRRNj_FHFEjQy8a",
@@ -112,11 +118,11 @@ export default function RootLayout({
     url: siteUrl,
     logo: {
       "@type": "ImageObject",
-      url: `${siteUrl}/1.png`,
-      width: 300,
-      height: 300,
+      url: `${siteUrl}/logo-trimmed.png`,
+      width: 512,
+      height: 512,
     },
-    image: `${siteUrl}/og-image.png`,
+    image: `${siteUrl}/og-image.jpg`,
     telephone: "+91 7428244306",
     email: "contact@divtagstudios.in",
     address: {
@@ -276,6 +282,12 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} dark`} suppressHydrationWarning>
       <head>
+        <meta name="theme-color" content="#7c3aed" />
+        <link rel="manifest" href="/site.webmanifest" />
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
